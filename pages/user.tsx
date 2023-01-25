@@ -43,15 +43,20 @@ const User = () => {
     const showUser = () => {
         if (user) {
             return (
-                <div>
-                    <h2>-----</h2>
-                    <span> {user.name.title} </span>
-                    <span> {user.name.first} </span>
-                    <span> {user.name.last} </span>
-                    <Image src={user?.picture.large}
-                        alt="User profile picture"
-                        width="100"
-                        height="100" />
+                <div className="flex justify-center mb-4">
+                    <div className="flex-col">
+                        <span className="flex justify-center">
+                            {user.name.title} {' '}
+                            {user.name.first} {' '}
+                            {user.name.last}
+                        </span>
+                        <Image src={user?.picture.large}
+                            className="border-2 rounded-full"
+                            alt="User profile picture"
+                            width="200"
+                            height="200" />
+                    </div>
+
                 </div>
             )
         }
@@ -86,10 +91,16 @@ const User = () => {
 
     return (
         <>
-            <h1 className="text-5xl">Hello Random user company:</h1>
-            {showUser()}
-            {showUsers()}
-            <br /> <br />
+            <nav className="text-xl bg-blue-400 p-4" > Home | Profile | Contact | Help </nav>
+            <main>
+                <h1 className="text-3xl p-2 text-center">..:: Hello Random user company ::..</h1>
+                {showUser()}
+                <ul className="flex justify-around">
+                    {showUsers()}
+                </ul>
+            </main>
+
+            <footer className="mt-8 bg-slate-400 text-center"> NextJS/React : Copy right 2023 </footer>
         </>
     )
 }
