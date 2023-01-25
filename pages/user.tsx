@@ -43,20 +43,17 @@ const User = () => {
     const showUser = () => {
         if (user) {
             return (
-                <div className="flex justify-center mb-4">
-                    <div className="flex-col">
-                        <span className="flex justify-center">
-                            {user.name.title} {' '}
-                            {user.name.first} {' '}
-                            {user.name.last}
-                        </span>
-                        <Image src={user?.picture.large}
-                            className="border-2 rounded-full"
-                            alt="User profile picture"
-                            width="200"
-                            height="200" />
-                    </div>
-
+                <div className="flex flex-col items-center mb-4">
+                    <span>
+                        {user.name.title} {' '}
+                        {user.name.first} {' '}
+                        {user.name.last}
+                    </span>
+                    <Image src={user?.picture.large}
+                        className="border-2 rounded-full"
+                        alt="User profile picture"
+                        width="200"
+                        height="200" />
                 </div>
             )
         }
@@ -70,7 +67,8 @@ const User = () => {
             return users?.map((user, index) => {
                 console.log("User: ", user.picture.large);
                 return (
-                    <li key={index}>
+                    <li key={index}
+                        className="flex flex-col items-center">
                         <span>
                             {user.name.title} {' '}
                             {user.name.first} {' '}
@@ -100,7 +98,7 @@ const User = () => {
                 </ul>
             </main>
 
-            <footer className="mt-8 bg-slate-400 text-center"> NextJS/React : Copy right 2023 </footer>
+            <footer className="mt-8 text-2xl p-2 bg-slate-400 text-center"> NextJS/React : Copy right 2023 </footer>
         </>
     )
 }
