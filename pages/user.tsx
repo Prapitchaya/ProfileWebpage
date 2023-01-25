@@ -89,7 +89,6 @@ const User = () => {
 
     return (
         <>
-            <nav className="text-xl bg-blue-400 p-4" > Home | Profile | Contact | Help </nav>
             <main>
                 <h1 className="text-3xl p-2 text-center">..:: Hello Random user company ::..</h1>
                 {showUser()}
@@ -97,8 +96,6 @@ const User = () => {
                     {showUsers()}
                 </ul>
             </main>
-
-            <footer className="mt-8 text-2xl p-2 bg-slate-400 text-center"> NextJS/React : Copy right 2023 </footer>
         </>
     )
 }
