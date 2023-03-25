@@ -11,7 +11,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'redhatdisplay': ['Red Hat Display','sans-serif']
+        'redhatdisplay': ['Red Hat Display','sans-serif'],
+        'barlow': ['Barlow Semi Condensed','sans-serif'],
+        'raleway': ['Raleway', 'sans-serif'],
+        'overpass': ['Overpass', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'],
       },
     },
   },

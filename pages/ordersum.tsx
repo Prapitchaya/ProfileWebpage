@@ -7,7 +7,7 @@ import backgroundmobile from '../pattern-background-desktop.svg'
 export default function Home() {
     return (
         <div className="grid h-screen w-screen bg-[#e0e8ff] items-center justify-center">
-            <div className="flex flex-col h-[28rem] w-[16.5rem] rounded-[1rem] items-center shadow-2xl shadow-[#bbcafc] bg-white">
+            <div className="flex flex-col h-[28rem] w-[16.5rem] rounded-[1rem] items-center  shadow-2xl shadow-[#bbcafc] bg-white">
                 <Image className='rounded-t-[1rem]' src={illustrationhero} alt="" />
                 <div className='flex flex-col gap-4 h-[full] w-5/6 mt-5 items-center font-redhatdisplay text-center'>
                     <div className='text-[#1f2f56] font-black text-[18px]'>Order Summary</div>
@@ -25,7 +25,6 @@ export default function Home() {
                         <div className='cursor-pointer h-3 hover:text-[#1f2f56]'>Cancel Order</div>
                     </div>
                 </div>
-
             </div>
         </div>
     )
